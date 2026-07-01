@@ -1,0 +1,155 @@
+
+<style>
+  .wrap { font-family: var(--font-sans); padding: 1rem 0; }
+  .section-title { font-size: 11px; font-weight: 500; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: .05em; margin: 20px 0 10px; }
+  .row { display: grid; gap: 10px; margin-bottom: 10px; }
+  .row-2 { grid-template-columns: 1fr 1fr; }
+  .row-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .row-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .card { border-radius: 8px; padding: 11px 14px; font-size: 12px; line-height: 1.55; border: 0.5px solid var(--color-border-secondary); background: var(--color-background-secondary); }
+  .card-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+  .sub { color: var(--color-text-secondary); font-size: 11px; }
+  .c-teal .card-title { color: #0F6E56; }
+  .c-purple .card-title { color: #534AB7; }
+  .c-coral .card-title { color: #993C1D; }
+  .c-amber .card-title { color: #854F0B; }
+  .c-blue .card-title { color: #185FA5; }
+  .c-pink .card-title { color: #993556; }
+  .c-red .card-title { color: #A32D2D; }
+  .full-card { border-radius: 8px; padding: 12px 16px; font-size: 12px; border: 0.5px solid var(--color-border-primary); background: var(--color-background-secondary); margin-bottom: 10px; }
+  .full-card .card-title { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
+  .divider { height: 1px; background: var(--color-border-tertiary); margin: 18px 0; }
+  .demo-box { border-radius: 10px; padding: 14px 18px; border: 1px solid var(--color-border-secondary); background: var(--color-background-secondary); margin-bottom: 10px; }
+  .demo-step { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 10px; font-size: 12px; }
+  .demo-num { min-width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; background: var(--color-background-primary); border: 0.5px solid var(--color-border-secondary); color: var(--color-text-secondary); flex-shrink: 0; margin-top: 1px; }
+  .demo-text { color: var(--color-text-primary); line-height: 1.5; }
+  .demo-label { font-weight: 500; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 500; margin-right: 4px; }
+  .tag-voice { background: #EEEDFE; color: #3C3489; }
+  .tag-vision { background: #E1F5EE; color: #085041; }
+  .tag-touch { background: #FAEEDA; color: #633806; }
+  .tag-ai { background: #FAECE7; color: #712B13; }
+  .moat-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+</style>
+
+<div class="wrap">
+
+  <div class="section-title">The core concept</div>
+  <div class="full-card">
+    <div class="card-title" style="color: var(--color-text-primary)">Polyphony — spatially-aware creative AI director</div>
+    <div class="sub">Understands what it sees. Decomposes it into meaningful zones. Directs you through each one with voice, vision, and touch — simultaneously. Not a tool you operate. A director that guides the session.</div>
+  </div>
+
+  <div class="section-title">Input layer — full multimodal</div>
+  <div class="row row-4">
+    <div class="card c-purple">
+      <div class="card-title">Voice</div>
+      <div class="sub">Gemini Live-style · real-time · "make the glasses rounder"</div>
+    </div>
+    <div class="card c-teal">
+      <div class="card-title">Vision</div>
+      <div class="sub">Image · video · screen · live camera feed</div>
+    </div>
+    <div class="card c-amber">
+      <div class="card-title">Touch/click</div>
+      <div class="sub">Tap a zone directly · drag to adjust · pinch to zoom</div>
+    </div>
+    <div class="card c-coral">
+      <div class="card-title">Text</div>
+      <div class="sub">Chat alongside · reference uploads · style prompts</div>
+    </div>
+  </div>
+
+  <div class="section-title">Spatial intelligence layer — the new core</div>
+  <div class="row row-3">
+    <div class="card c-teal">
+      <div class="card-title">Scene understanding</div>
+      <div class="sub">BLIP2 + CLIP · identifies objects, people, zones · understands what matters in the frame</div>
+    </div>
+    <div class="card c-teal">
+      <div class="card-title">Zone decomposition</div>
+      <div class="sub">Breaks scene into editable regions · face → accessories → torso → hands → background · priority ordering</div>
+    </div>
+    <div class="card c-teal">
+      <div class="card-title">Context per zone</div>
+      <div class="sub">Each zone gets its own style options · knows glasses vs jacket vs shoes have different parameters</div>
+    </div>
+  </div>
+
+  <div class="section-title">Director layer — the AI art director</div>
+  <div class="row row-2">
+    <div class="card c-purple">
+      <div class="card-title">Session orchestrator</div>
+      <div class="sub">LangGraph agent · decides which zone to tackle next · remembers what was changed · maintains creative coherence across the whole piece</div>
+    </div>
+    <div class="card c-purple">
+      <div class="card-title">Suggestion engine</div>
+      <div class="sub">Proactively offers options · "these 3 lens colors work with the jacket" · style consistency checks · "this clashes with what you changed earlier"</div>
+    </div>
+  </div>
+
+  <div class="section-title">Execution layer — the Polyphony pillars</div>
+  <div class="row row-3">
+    <div class="card c-coral">
+      <div class="card-title">FRAME</div>
+      <div class="sub">Visual editing · inpainting · Real-ESRGAN · style transfer · zoom/crop · super-res on active zone</div>
+    </div>
+    <div class="card c-coral">
+      <div class="card-title">RESONANCE</div>
+      <div class="sub">Audio sync to edits · score matching · voice commands processed · denoise · enhance</div>
+    </div>
+    <div class="card c-coral">
+      <div class="card-title">SENTINEL</div>
+      <div class="sub">Monitors pipeline health · logs every edit decision · "undo to 3 steps ago" · error recovery</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-title">How a session actually feels — costume edit example</div>
+  <div class="demo-box">
+    <div class="demo-step">
+      <div class="demo-num">1</div>
+      <div class="demo-text"><span class="demo-label">Upload.</span> User drops image of man in costume. App parses the scene in 2–3 seconds. Identifies: face, glasses, jacket, gloves, belt, boots. <span class="tag tag-ai">AI</span></div>
+    </div>
+    <div class="demo-step">
+      <div class="demo-num">2</div>
+      <div class="demo-text"><span class="demo-label">Director speaks.</span> "I can see 6 editable zones. Want to start with the face?" App auto-zooms to face. <span class="tag tag-voice">voice</span> <span class="tag tag-vision">vision</span></div>
+    </div>
+    <div class="demo-step">
+      <div class="demo-num">3</div>
+      <div class="demo-text"><span class="demo-label">Glasses zone active.</span> Shows 6 frame styles, 8 lens colors, 3 shape options — all rendered onto the face in real-time as user hovers. <span class="tag tag-touch">touch</span> <span class="tag tag-ai">AI</span></div>
+    </div>
+    <div class="demo-step">
+      <div class="demo-num">4</div>
+      <div class="demo-text"><span class="demo-label">User says "rounder, darker lenses."</span> App applies. Asks "Keep the gold frame or try silver?" <span class="tag tag-voice">voice</span></div>
+    </div>
+    <div class="demo-step">
+      <div class="demo-num">5</div>
+      <div class="demo-text"><span class="demo-label">Zone complete. Director moves.</span> "Glasses done. Moving to hands — I see gloves, want to change material or color?" Auto-zooms to hands. <span class="tag tag-voice">voice</span> <span class="tag tag-vision">vision</span></div>
+    </div>
+    <div class="demo-step" style="margin-bottom:0">
+      <div class="demo-num">6</div>
+      <div class="demo-text"><span class="demo-label">Coherence check.</span> After all zones done — "The gold belt doesn't match the silver glasses you chose. Want me to fix that?" <span class="tag tag-ai">AI</span></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-title">Why nobody has built this</div>
+  <div class="moat-row">
+    <div class="card c-blue">
+      <div class="card-title">Adobe / Photoshop</div>
+      <div class="sub">You find the tool. No spatial awareness. No direction. No coherence across zones.</div>
+    </div>
+    <div class="card c-blue">
+      <div class="card-title">Runway / Firefly</div>
+      <div class="sub">Generate or inpaint. No zone decomposition. No session memory. No art direction.</div>
+    </div>
+    <div class="card c-blue">
+      <div class="card-title">Gemini Live</div>
+      <div class="sub">Conversational. Not spatially decomposed. Can't zoom, suggest, check fit per zone.</div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,172 @@
+
+<style>
+  .wrap { font-family: var(--font-sans); padding: 1rem 0; }
+  .section-title { font-size: 11px; font-weight: 500; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: .05em; margin: 18px 0 9px; }
+  .row { display: grid; gap: 10px; margin-bottom: 10px; }
+  .row-2 { grid-template-columns: 1fr 1fr; }
+  .row-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .row-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .card { border-radius: 8px; padding: 11px 14px; font-size: 12px; line-height: 1.55; border: 0.5px solid var(--color-border-secondary); background: var(--color-background-secondary); }
+  .card-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+  .sub { color: var(--color-text-secondary); font-size: 11px; line-height: 1.6; }
+  .c-teal .card-title { color: #0F6E56; }
+  .c-purple .card-title { color: #534AB7; }
+  .c-coral .card-title { color: #993C1D; }
+  .c-amber .card-title { color: #854F0B; }
+  .c-blue .card-title { color: #185FA5; }
+  .c-pink .card-title { color: #993556; }
+  .full-card { border-radius: 8px; padding: 13px 16px; font-size: 12px; border: 1px solid var(--color-border-secondary); background: var(--color-background-secondary); margin-bottom: 10px; }
+  .full-card .card-title { font-size: 14px; font-weight: 500; margin-bottom: 5px; }
+  .divider { height: 1px; background: var(--color-border-tertiary); margin: 16px 0; }
+  .flow { display: flex; align-items: stretch; gap: 0; margin-bottom: 10px; overflow: hidden; border-radius: 8px; border: 0.5px solid var(--color-border-secondary); }
+  .flow-step { flex: 1; padding: 10px 12px; font-size: 11px; line-height: 1.5; background: var(--color-background-secondary); border-right: 0.5px solid var(--color-border-tertiary); }
+  .flow-step:last-child { border-right: none; }
+  .flow-step-title { font-size: 12px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 3px; }
+  .flow-step-sub { color: var(--color-text-secondary); }
+  .highlight-card { border-radius: 10px; padding: 14px 18px; border: 1px solid var(--color-border-primary); background: var(--color-background-secondary); margin-bottom: 10px; }
+  .highlight-card .card-title { font-size: 14px; font-weight: 500; margin-bottom: 6px; color: var(--color-text-primary); }
+  .vs-row { display: grid; grid-template-columns: 1fr 24px 1fr; gap: 0; align-items: center; margin-bottom: 10px; }
+  .vs-label { text-align: center; font-size: 11px; font-weight: 500; color: var(--color-text-tertiary); }
+  .genre-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .genre-card { border-radius: 8px; padding: 9px 11px; font-size: 11px; border: 0.5px solid var(--color-border-secondary); background: var(--color-background-secondary); }
+  .genre-title { font-size: 12px; font-weight: 500; margin-bottom: 3px; color: var(--color-text-primary); }
+  .genre-rules { color: var(--color-text-secondary); font-size: 10px; line-height: 1.6; }
+</style>
+
+<div class="wrap">
+
+  <div class="full-card">
+    <div class="card-title">Polyphony — AI creative producer</div>
+    <div class="sub">User brings raw footage + music + context. Polyphony produces. Cuts to the music, lights for the genre, focuses for the message, suggests where you're leaving emotion on the table.</div>
+  </div>
+
+  <div class="section-title">What the user brings to the session</div>
+  <div class="row row-3">
+    <div class="card c-coral">
+      <div class="card-title">Raw video</div>
+      <div class="sub">Any footage · phone video · professional shoot · existing cuts · multiple clips</div>
+    </div>
+    <div class="card c-purple">
+      <div class="card-title">Their music</div>
+      <div class="sub">Original track · licensed music · reference song · even hummed melody · "something like this vibe"</div>
+    </div>
+    <div class="card c-teal">
+      <div class="card-title">Context</div>
+      <div class="sub">"This is a perfume ad" · "wedding highlight reel" · "hype video for my gym" · "short film intro"</div>
+    </div>
+  </div>
+
+  <div class="section-title">Music analysis — RESONANCE reads the track</div>
+  <div class="flow">
+    <div class="flow-step">
+      <div class="flow-step-title">Tempo map</div>
+      <div class="flow-step-sub">BPM · beat positions · downbeats · rhythm pattern</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-title">Emotional arc</div>
+      <div class="flow-step-sub">Builds · drops · climax · resolution · tension points</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-title">Mood fingerprint</div>
+      <div class="flow-step-sub">CLAP embeddings · genre · energy level · warmth · intensity</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-title">Cut points</div>
+      <div class="flow-step-sub">Suggests exact timestamps where cuts feel natural</div>
+    </div>
+  </div>
+
+  <div class="section-title">Genre intelligence — context drives production style</div>
+  <div class="genre-row">
+    <div class="genre-card">
+      <div class="genre-title">Perfume / luxury ad</div>
+      <div class="genre-rules">Slow motion · soft focus · golden hour · texture close-ups · 3s cuts · desaturated with warm skin tones</div>
+    </div>
+    <div class="genre-card">
+      <div class="genre-title">Gym / hype video</div>
+      <div class="genre-rules">Fast cuts on beat · high contrast · desaturated · motion blur · slow-mo on peak effort · bass drop = cut</div>
+    </div>
+    <div class="genre-card">
+      <div class="genre-title">Wedding highlight</div>
+      <div class="genre-rules">Warm grade · soft transitions · reaction shots · ambient audio preserved · emotional peak = hold frame</div>
+    </div>
+    <div class="genre-card">
+      <div class="genre-title">Music video</div>
+      <div class="genre-rules">Visual sync to lyrics · performance + narrative intercut · color story per section · zoom on vocal peaks</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-title">The production session — what AI actually does</div>
+  <div class="flow">
+    <div class="flow-step">
+      <div class="flow-step-title">1. Parse</div>
+      <div class="flow-step-sub">Reads video · reads music · reads context · builds a production brief</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-title">2. Map</div>
+      <div class="flow-step-sub">Aligns music arc to video moments · finds best clip for each beat section</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-title">3. Cut</div>
+      <div class="flow-step-sub">Assembles first cut · transitions on beat · holds on emotional peaks</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-title">4. Grade</div>
+      <div class="flow-step-sub">Lighting · color · focus · frame size · all matched to genre</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-title">5. Direct</div>
+      <div class="flow-step-sub">Flags what's missing · suggests improvements · explains its choices</div>
+    </div>
+  </div>
+
+  <div class="section-title">The direction layer — this is the world dent</div>
+  <div class="row row-2">
+    <div class="card c-purple">
+      <div class="card-title">Proactive suggestions</div>
+      <div class="sub">"Your music builds at 0:47 but your cut is too fast — hold the frame 2 seconds to let it breathe"<br><br>"The chorus hits hard but you have no visual peak there — want me to pull this clip forward?"<br><br>"Your ad says luxury but the lighting is flat — want a warm grade on the product shots?"</div>
+    </div>
+    <div class="card c-purple">
+      <div class="card-title">Coherence across the whole piece</div>
+      <div class="sub">"The first 30 seconds feel fast but the outro is slow — they don't match the same song"<br><br>"You have 3 different color temperatures — want me to unify them?"<br><br>"The focus style changes between scenes — is that intentional or should I fix it?"</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-title">What this replaces</div>
+  <div class="vs-row">
+    <div class="card" style="border-color: var(--color-border-secondary);">
+      <div class="card-title" style="color: var(--color-text-secondary); font-size:12px;">Traditional production</div>
+      <div class="sub">Video editor — 2 weeks · Music supervisor — 3 days · Colorist — 1 day · Director feedback — 4 rounds · Total: $8,000–$40,000</div>
+    </div>
+    <div class="vs-label">vs</div>
+    <div class="card c-teal">
+      <div class="card-title">Polyphony session</div>
+      <div class="sub">Upload · explain context · talk to it · approve suggestions · export · Total: 20 minutes</div>
+    </div>
+  </div>
+
+  <div class="section-title">Who this is for</div>
+  <div class="row row-4">
+    <div class="card c-blue">
+      <div class="card-title">Indie musicians</div>
+      <div class="sub">Can't afford a music video director. Now they have one.</div>
+    </div>
+    <div class="card c-blue">
+      <div class="card-title">Small brands</div>
+      <div class="sub">Ad agency is $50k. Polyphony is $50/month.</div>
+    </div>
+    <div class="card c-blue">
+      <div class="card-title">Content creators</div>
+      <div class="sub">Makes pro-level edits without learning Premiere.</div>
+    </div>
+    <div class="card c-blue">
+      <div class="card-title">Film students</div>
+      <div class="sub">Director-level feedback on every project.</div>
+    </div>
+  </div>
+
+</div>
