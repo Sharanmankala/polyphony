@@ -89,8 +89,8 @@ polyphony/
 
 ```bash
 cd backend
-python3.11 -m venv .venv
-source .venv/bin/activate
+/opt/homebrew/bin/python3.12 -m venv .venv-py312
+source .venv-py312/bin/activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```

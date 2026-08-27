@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from contextlib import asynccontextmanager
 import json
 from datetime import datetime, UTC
 from pathlib import Path
@@ -20,18 +21,19 @@ from app.models import (
     StoreData,
 )
 
+@asynccontextmanager
+async def lifespan(_: FastAPI):
+    ensure_app_directories()
+    initialize_store_file()
+    yield
+
 
 app = FastAPI(
     title=settings.app_name,
     version=settings.app_version,
     description="Local backend for the Polyphony creative operating system.",
+    lifespan=lifespan,
 )
-
-
-@app.on_event("startup")
-def on_startup() -> None:
-    ensure_app_directories()
-    initialize_store_file()
 
 
 @app.get("/health", response_model=HealthResponse)

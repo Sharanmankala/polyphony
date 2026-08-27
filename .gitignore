@@ -10,17 +10,18 @@ __pycache__/
 .venv/
 venv/
 env/
+.venv-*/
+
+# Local environment variables and secrets
+.env
+.env.*
+!.env.example
 
 # Local runtime data and uploaded media
 backend/data/*
 !backend/data/.gitkeep
 backend/assets/images/*
 !backend/assets/images/.gitkeep
-
-# Secrets and local configuration
-.env
-.env.*
-!.env.example
 
 # OS and editor files
 .DS_Store
